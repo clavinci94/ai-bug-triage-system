@@ -1,0 +1,22 @@
+title,body,label
+App crashes on startup,The application crashes whenever I try to start it,bug
+Add dark mode,It would be great to have a dark mode for the UI,feature
+Documentation typo,There is a small typo in the installation docs,documentation
+Improve performance,The app slows down with large datasets,enhancement
+Login fails sometimes,The login endpoint returns 500 error randomly,bug
+Support export to CSV,Allow users to export data to CSV files,feature
+Update README,Add installation steps for MacOS in the README,documentation
+Memory leak in parser,The parser consumes more and more memory over time,bug
+Add multi-language support,Please add support for French and Spanish translations,feature
+Broken link in docs,The quickstart guide has a broken link to examples,documentation
+Optimize database queries,The dashboard loads too slowly due to inefficient SQL queries,enhancement
+UI freezes on logout,The app freezes for 10 seconds when logging out,bug
+Add user roles,We need role-based access control for admins and editors,feature
+Clarify API usage,The API docs do not explain the authentication flow clearly,documentation
+Refactor caching logic,Improve caching mechanism for faster responses,enhancement
+Crash on file upload,Uploading large files leads to immediate crash,bug
+Export to PDF,Provide an option to export reports directly as PDF,feature
+Fix formatting in README,The markdown headers are broken in GitHub preview,documentation
+Reduce bundle size,The frontend JavaScript bundle is too large,enhancement
+App hangs on iOS,On iOS devices the app sometimes becomes unresponsive,bug
+

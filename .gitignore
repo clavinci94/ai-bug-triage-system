@@ -1,0 +1,14 @@
+# Bytecode
+__pycache__/
+*.pyc
+
+# Virtualenv
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment variables
+.env
