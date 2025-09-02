@@ -51,6 +51,7 @@ ai-bug-triage-system/
 │   └── issues.csv             # Trainingsdaten
 ├── requirements.txt
 └── README.md
+```
 
 
 ## Installation & Start
@@ -58,6 +59,7 @@ ai-bug-triage-system/
 Voraussetzung: Python 3.10+  
 
 ```bash
+```
 git clone <REPO_URL>
 cd ai-bug-triage-system
 
@@ -103,4 +105,5 @@ Modell vergleichen mit moderneren Ansätzen (Transformers)
 Dataset-Upload über API ermöglichen
 Integration mit externen Tools (z. B. JIRA, Slack)
 Docker-Setup + CI/CD
+
 
