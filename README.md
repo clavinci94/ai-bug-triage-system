@@ -34,19 +34,24 @@ Die API ist mit Swagger dokumentiert und kann direkt im Browser unter `/docs` au
 
 ## Projektstruktur
 
+```text
 ai-bug-triage-system/
 ├── backend/
-│ └── core/
-│ ├── main.py # Einstiegspunkt (FastAPI App)
-│ ├── config.py # Einstellungen (env Variablen)
-│ ├── models/schemas.py
-│ ├── routes/issues.py # Endpunkte
-│ └── services/
-│ ├── github.py # Import von GitHub
-│ └── classifier.py # Klassifikations-Logik
-├── issues.csv # Trainingsdaten
+│   └── core/
+│       ├── main.py            # Einstiegspunkt (FastAPI App)
+│       ├── config.py          # Einstellungen (env Variablen)
+│       ├── models/
+│       │   └── schemas.py     # Pydantic Schemas
+│       ├── routes/
+│       │   └── issues.py      # API Endpunkte
+│       └── services/
+│           ├── github.py      # Import von GitHub Issues
+│           └── classifier.py  # Klassifikations-Logik (ML)
+├── data/
+│   └── issues.csv             # Trainingsdaten
 ├── requirements.txt
 └── README.md
+
 
 ## Installation & Start
 
@@ -98,3 +103,4 @@ Modell vergleichen mit moderneren Ansätzen (Transformers)
 Dataset-Upload über API ermöglichen
 Integration mit externen Tools (z. B. JIRA, Slack)
 Docker-Setup + CI/CD
+
