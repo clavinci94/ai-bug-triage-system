@@ -104,7 +104,7 @@ http://127.0.0.1:8000/docs
   }
 ```
 
-###Beispiel Antwort
+### Beispiel Antwort
 ```
 {
   "category": "bug",
@@ -112,6 +112,7 @@ http://127.0.0.1:8000/docs
   "rationale": "ML-NaiveBayes auf Mini-Dataset"
 }
 ```
+### Beispiel 2
 
 ```
 {
@@ -127,17 +128,13 @@ http://127.0.0.1:8000/docs
   "rationale": "ML-NaiveBayes auf issues.csv"
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
+### Beispiel Feature
+```
+{
+    "title": "Add dark mode",
+    "body": "It would be great to have a dark mode for the UI."
+}
+```
 
 ## Machine Learning
 Aktuell steckt hinter der Klassifizierung ein recht einfaches Modell:
@@ -151,6 +148,7 @@ Später könnte man hier stärkere Modelle einsetzen (z. B. BERT oder Sentence T
 Das Projekt hat mir geholfen, Backend-Entwicklung und Machine Learning in einem praktischen Kontext zu verbinden.
 Besonders spannend war für mich der Workflow von Datenimport → Modelltraining → API-Endpunkt → Dokumentation in Swagger.
 Es ist ein Lernprojekt, aber mit echter Relevanz für den Alltag von Entwicklern, die große Open-Source-Repos managen.
+
 
 
 
