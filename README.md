@@ -53,29 +53,39 @@ ai-bug-triage-system/
 └── README.md
 ```
 
+- Voraussetzung: Python 3.10+  
+- GitHub Token (falls private Repos importiert werden sollen)
 
-## Installation & Start
-
-Voraussetzung: Python 3.10+  
-
+## Setup
+```
+# Repository klonen
 git clone <REPO_URL>
 cd ai-bug-triage-system
 
+# Virtuelle Umgebung erstellen & aktivieren
 python -m venv .venv
 source .venv/bin/activate   # macOS/Linux
 # .venv\Scripts\activate    # Windows
 
+# Dependencies installieren
 pip install -r requirements.txt
+```
 
-
-Falls man private GitHub-Repos importieren möchte, legt man eine .env Datei an mit:
-GITHUB_TOKEN=ghp_...mein_token...
+## .env Datei
+Falls ein privates GitHub Repo genutzt werden soll:
+GITHUB_TOKEN=ghp_abc123meinToken
 Starten des Servers:
 python -m uvicorn backend.core.main:app --reload
 Dann im Browser öffnen:
 👉 http://127.0.0.1:8000/docs
 
-Beispiel-Requests
+## Starten
+python -m uvicorn backend.core.main:app --reload
+
+Die API ist dann erreichbar unter:
+http://127.0.0.1:8000/docs
+
+## Beispiel-Requests
 Klassifizieren
 curl -X POST "http://127.0.0.1:8000/issues/classify" \
   -H "Content-Type: application/json" \
@@ -89,7 +99,8 @@ Antwort (Beispiel):
   "confidence": 0.82,
   "rationale": "NaiveBayes auf issues.csv"
 }
-Machine Learning
+
+## Machine Learning
 Aktuell steckt hinter der Klassifizierung ein recht einfaches Modell:
 Texte werden mit TF-IDF in Vektoren umgewandelt
 Klassifikation mit einem Naive Bayes Modell
@@ -97,12 +108,13 @@ Trainingsdaten liegen in issues.csv
 Das Schöne: wenn neue Daten reinkommen, kann das Modell direkt per API neu trainiert werden.
 Später könnte man hier stärkere Modelle einsetzen (z. B. BERT oder Sentence Transformers), aber für den ersten Prototyp reicht das völlig.
 
-Roadmap
+## Roadmap
 Mehr Trainingsdaten sammeln
 Modell vergleichen mit moderneren Ansätzen (Transformers)
 Dataset-Upload über API ermöglichen
 Integration mit externen Tools (z. B. JIRA, Slack)
 Docker-Setup + CI/CD
+
 
 
 
