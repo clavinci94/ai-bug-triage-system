@@ -86,19 +86,58 @@ Die API ist dann erreichbar unter:
 http://127.0.0.1:8000/docs
 
 ## Beispiel-Requests
-Klassifizieren
-curl -X POST "http://127.0.0.1:8000/issues/classify" \
-  -H "Content-Type: application/json" \
-  -d '{
-        "title": "App crashes on upload",
-        "body": "Uploading a PDF freezes the app and it crashes."
-      }'
-Antwort (Beispiel):
+
+### Alle Anfragen an die API folgen der gleichen Struktur:
+```
+{
+    "title": "Kurze Zusammenfassung des Issues",
+    "body": "Detaillierte Beschreibung des Issues."
+}
+```
+
+### Klassifikation: Bug
+```
+
+  {
+    "title": "New crash when exporting PDF",
+    "body": "The app crashes immediately when exporting PDF."
+  }
+```
+
+###Beispiel Antwort
+```
 {
   "category": "bug",
-  "confidence": 0.82,
-  "rationale": "NaiveBayes auf issues.csv"
+  "confidence": 0.91,
+  "rationale": "ML-NaiveBayes auf Mini-Dataset"
 }
+```
+
+```
+{
+    "title": "UI freezes on logout",
+    "body": "The application becomes unresponsive for 10 seconds after logging out."
+}
+```
+### Beispiel Antwort
+```
+{
+  "category": "bug",
+  "confidence": 0.5017993320213663,
+  "rationale": "ML-NaiveBayes auf issues.csv"
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 
 ## Machine Learning
 Aktuell steckt hinter der Klassifizierung ein recht einfaches Modell:
@@ -112,6 +151,7 @@ Später könnte man hier stärkere Modelle einsetzen (z. B. BERT oder Sentence T
 Das Projekt hat mir geholfen, Backend-Entwicklung und Machine Learning in einem praktischen Kontext zu verbinden.
 Besonders spannend war für mich der Workflow von Datenimport → Modelltraining → API-Endpunkt → Dokumentation in Swagger.
 Es ist ein Lernprojekt, aber mit echter Relevanz für den Alltag von Entwicklern, die große Open-Source-Repos managen.
+
 
 
 
