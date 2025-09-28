@@ -108,12 +108,11 @@ Trainingsdaten liegen in issues.csv
 Das Schöne: wenn neue Daten reinkommen, kann das Modell direkt per API neu trainiert werden.
 Später könnte man hier stärkere Modelle einsetzen (z. B. BERT oder Sentence Transformers), aber für den ersten Prototyp reicht das völlig.
 
-## Roadmap
-Mehr Trainingsdaten sammeln
-Modell vergleichen mit moderneren Ansätzen (Transformers)
-Dataset-Upload über API ermöglichen
-Integration mit externen Tools (z. B. JIRA, Slack)
-Docker-Setup + CI/CD
+## Fazit
+Das Projekt hat mir geholfen, Backend-Entwicklung und Machine Learning in einem praktischen Kontext zu verbinden.
+Besonders spannend war für mich der Workflow von Datenimport → Modelltraining → API-Endpunkt → Dokumentation in Swagger.
+Es ist ein Lernprojekt, aber mit echter Relevanz für den Alltag von Entwicklern, die große Open-Source-Repos managen.
+
 
 
 
